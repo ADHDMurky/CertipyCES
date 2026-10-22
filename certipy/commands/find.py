@@ -2421,20 +2421,14 @@ class Find:
                         ces_finding += f" at {ces_url}"
                     ces_finding += "."
 
-                    if "ESC8" in vulnerabilities:
-                        vulnerabilities["ESC8"] += f" {ces_finding}"
-                    else:
-                        vulnerabilities["ESC8"] = ces_finding
+                    vulnerabilities["ESC8.1"] = ces_finding
                 elif ces_enabled and ces_channel_binding in (None, "Unknown"):
                     ces_remark = (
                         "Channel Binding couldn't be verified for CES. For manual "
                         "verification, authenticate to the CES endpoint without "
                         "Channel Binding and observe whether the request succeeds."
                     )
-                    if "ESC8" in remarks:
-                        remarks["ESC8"] += f" {ces_remark}"
-                    else:
-                        remarks["ESC8"] = ces_remark
+                    remarks["ESC8.1"] = ces_remark
 
         # ESC11: Unencrypted certificate requests
         if ca.get("enforce_encrypt_icertrequest") == "Disabled" and will_issue:

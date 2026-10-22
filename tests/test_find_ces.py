@@ -107,9 +107,9 @@ class CESFindTests(unittest.TestCase):
         ):
             vulnerabilities, _, _, _ = self.finder.get_ca_vulnerabilities(ca)
 
-        self.assertIn("ESC8", vulnerabilities)
-        self.assertIn("CES", vulnerabilities["ESC8"])
-        self.assertIn("Channel Binding is disabled", vulnerabilities["ESC8"])
+        self.assertIn("ESC8.1", vulnerabilities)
+        self.assertIn("CES", vulnerabilities["ESC8.1"])
+        self.assertIn("Channel Binding is disabled", vulnerabilities["ESC8.1"])
 
 
 if __name__ == "__main__":
