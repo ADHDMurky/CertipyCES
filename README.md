@@ -51,6 +51,10 @@ If `-template` is omitted, Certipy selects `Machine` for computer accounts and
 `User` for user accounts. Certificate retrieval, template enumeration, and key
 archival are not supported in CES mode.
 
+The `find` command also probes each CA's conventional HTTPS Kerberos CES endpoint
+(`<CA name>_CES_Kerberos/service.svc/CES`) and reports its availability and EPA
+(channel binding) status.
+
 ---
 
 ## 🎯 Supported AD CS Vulnerabilities
